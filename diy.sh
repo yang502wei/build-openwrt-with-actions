@@ -1,7 +1,7 @@
 # 请在下方输入自定义命令(一般用来安装第三方插件)(可以留空)
 
 # 编辑默认的lan口ip地址
-sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 # 编辑默认的主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
@@ -20,7 +20,3 @@ echo 'src-git UA3F https://github.com/SunBK201/UA3F.git' >>feeds.conf.default
 git clone https://github.com/stevenjoezhang/luci-app-adguardhome.git package/ADGH
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 # SSR Plus
-# 对于 OpenWrt 21.02 或更低版本,必须手动将 Golang 工具链升级到1.18或更高版本才能编译 Xray-core。
-./scripts/feeds update packages
-rm -rf feeds/packages/lang/golang
-svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang feeds/packages/lang/golang
