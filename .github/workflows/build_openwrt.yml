@@ -7,17 +7,17 @@ on:
         description: "openWRT 仓库的拥有者 (Owner of openWRT repo)"
         type: string
         required: true
-        default: "coolsnowwolf"
+        default: "hzyitc"
       repo:
         description: "openWRT 仓库的名字 (Name of openWRT repo)"
         type: string
         required: true
-        default: "lede"
+        default: "openwrt-redmi-ax3000"
       branch:
         description: "openWRT 仓库的分支 (Branch of openWRT repo)"
         type: string
         required: true
-        default: "master"
+        default: "ipq50xx-qsdk-kernel-5.4-openwrt-21.02-qsdk-11.5.05.841.1029"
       multithreading:
         description: "开启多线程编译 (Enable multithreading build)"
         type: boolean
